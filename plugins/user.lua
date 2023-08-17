@@ -10,3 +10,22 @@ return {
   --   end,
   -- },
 }
+-- neovide config init.lua
+-- if vim.fn.exists "g:neovide" == 1 then -- Put anything you want to happen only in Neovide here
+--   vim.o.guifont = "CodeNewRoman Nerd Font Mono:h24" -- text below applies for VimScript
+--   vim.api.nvim_set_var("neovide_refresh_rate", 60)
+--   local alpha = function() return string.format("%x", math.floor(255 * vim.g.transparency or 0.8)) end
+--   -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
+--   vim.g.neovide_transparency = 0.8
+--   vim.g.transparency = 0.8
+--   vim.g.neovide_background_color = "#0f1117" .. alpha()
+--   vim.cmd [[
+-- " system clipboard
+--     nmap <c-c> "+y
+--     vmap <c-c> "+y
+--     nmap <c-v> "+p
+--     inoremap <c-v> <c-r>+
+--     cnoremap <c-v> <c-r>+
+--     " use <c-r> to insert original character without triggering things like auto-pairs
+--     inoremap <c-r> <c-v>]]
+-- end
