@@ -31,7 +31,8 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>bn"] = { "<cmd>cd%:p:h<cr>", desc = "cd current buffer path" },
-    ["<c-v>"] = {"<cmd>+p<cr>"}
+    ["<leader>bR"] = { "<cmd>OverseerRun<cr>", desc = "run the buffer task async" },
+    ["<leader>bT"] = { "<cmd>OverseeToggler<cr>", desc = "show the task list" }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
