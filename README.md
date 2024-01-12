@@ -33,4 +33,5 @@ git clone https://github.com/mrthere3/astronvim_config.git ~/.config/nvim/lua/us
 
 ```shell
 nvim
+
 ```
