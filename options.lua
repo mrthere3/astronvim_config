@@ -38,6 +38,17 @@ return function(local_vim)
   vim.g.icons_enabled = true
   vim.g.ui_notifications_enabled = true
   vim.g.resession_enabled = false
+  if vim.fn.has "wsl" then
+    vim.cmd [[
+    " system clipboard
+        nmap <c-c> "+y
+        vmap <c-c> "+y
+        nmap <c-v> "+p
+        inoremap <c-v> <c-r>+
+        cnoremap <c-v> <c-r>+
+        " use <c-r> to insert original character without triggering things like auto-pairs
+        inoremap <c-r> <c-v>]]
+  end
   if vim.fn.exists "g:neovide" == 1 then
     vim.o.guifont = "CodeNewRoman Nerd Font Mono:h24" -- text below applies for VimScript
     vim.api.nvim_set_var("neovide_refresh_rate", 60)
