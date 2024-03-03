@@ -19,4 +19,7 @@ return {
   s { "ireq", t {
     "import requests",
   } },
+  s { "ipd", t {
+    "import pandas as pd",
+  } },
 }
