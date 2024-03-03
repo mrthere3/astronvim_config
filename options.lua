@@ -40,14 +40,11 @@ return function(local_vim)
   vim.g.resession_enabled = false
   if vim.fn.has "wsl" then
     vim.cmd [[
-    " system clipboard
-        nmap <c-c> "+y
-        vmap <c-c> "+y
-        nmap <c-v> "+p
-        inoremap <c-v> <c-r>+
-        cnoremap <c-v> <c-r>+
-        " use <c-r> to insert original character without triggering things like auto-pairs
-        inoremap <c-r> <c-v>]]
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+  augroup END
+  ]]
   end
   if vim.fn.exists "g:neovide" == 1 then
     vim.o.guifont = "CodeNewRoman Nerd Font Mono:h24" -- text below applies for VimScript
