@@ -16,10 +16,16 @@ local m = extras.m
 local l = extras.l
 local postfix = require("luasnip.extras.postfix").postfix
 return {
-  s { "ireq", t {
-    "import requests",
-  } },
-  s { "ipd", t {
-    "import pandas as pd",
-  } },
+  s(
+    "ireq",
+    t {
+      "import requests",
+    }
+  ),
+  s(
+    "ipd",
+    t {
+      "import pandas as pd",
+    }
+  ),
 }
