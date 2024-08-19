@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -49,7 +49,11 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
+        ["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "Goto References" },
+        ["<leader>bn"] = { "<cmd>cd%:p:h<cr>", desc = "cd current buffer path" },
+        ["<leader>or"] = { "<cmd>OverseerRun<cr>", desc = "run the buffer task async" },
+        ["<leader>oc"] = { "<cmd>CompilerOpen<cr>", desc = "compiler the buffer task async" },
+        ["<leader>ot"] = { "<cmd>OverseerToggle<cr>", desc = "show the task list" },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
