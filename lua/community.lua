@@ -8,7 +8,9 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.completion.cmp-cmdline" },
+  -- { import = "astrocommunity.media.image-nvim" },
+  -- { import = "astrocommunity.completion.cmp-cmdline" },
+  -- { import = "astrocommunity.completion.blink-cmp" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
